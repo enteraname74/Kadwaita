@@ -17,6 +17,7 @@ kotlin {
             dependencies {
                 implementation(compose.ui)
                 implementation(compose.components.resources)
+                implementation(compose.material3)
             }
         }
     }

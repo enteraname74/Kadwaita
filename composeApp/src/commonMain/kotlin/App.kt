@@ -14,14 +14,20 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kadwaita.composeapp.generated.resources.Res
 import kadwaita.composeapp.generated.resources.compose_multiplatform
+import theme.AdwaitaTheme
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    AdwaitaTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("Test", style = AdwaitaTheme.typography.title1)
+            Text("Test", style = AdwaitaTheme.typography.title2)
+            Text("Test", style = AdwaitaTheme.typography.title3)
+            Text("Test", style = AdwaitaTheme.typography.title4)
+            Text("Test", style = AdwaitaTheme.typography.body)
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
